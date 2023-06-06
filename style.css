@@ -55,13 +55,25 @@ button:hover {
   max-width: 100%;
   overflow: hidden;
 }
+.high {
+  height: 300px;
+}
 @media (max-width: 700px) {
   .communication-header,
   .communication-header .left {
     flex-direction: column !important;
   }
+  .product-nav-links {
+    width: 100% !important;
+  }
+  .product-nav-links li a {
+    margin: 10px !important;
+  }
 }
 @media (max-width: 854px) {
+  #menu {
+    display: block !important;
+  }
   .navbar-links {
     display: none;
   }
