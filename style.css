@@ -1,0 +1,110 @@
+body {
+  font-family: "Lexend", sans-serif;
+  font-family: "Righteous", cursive;
+  font-family: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --dark-light: #19283f;
+  --white: white;
+  --gold: #ffe600;
+  --yello-dark: #e5c79b;
+  --yello-light: #ffdead;
+  --red: #dc143c;
+  --dark: #202020;
+  --dark-blue: #144272;
+}
+.communication-header {
+  background-color: var(--dark);
+}
+.header {
+  color: var(--dark);
+}
+.landing .right,
+.landing .left {
+  flex-basis: 50%;
+}
+.landing .left img {
+  min-width: 200%;
+  height: 100%;
+}
+.products-links li a {
+  transition: 0.3s;
+}
+.products-links li a:hover {
+  padding: 3px 10px;
+  border-bottom: 4px solid var(--dark);
+}
+.timer {
+  background-image: url("https://cdn.shopify.com/s/files/1/0749/8304/7476/files/6_1600x.jpg?v=1682001113");
+}
+button {
+  transition: 0.2s;
+}
+button:hover {
+  background-color: transparent !important;
+  color: var(--dark) !important;
+  border: 1px solid var(--dark) !important;
+}
+.cards .item:hover img {
+  transform: scale(1.1);
+  max-width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 700px) {
+  .communication-header,
+  .communication-header .left {
+    flex-direction: column !important;
+  }
+}
+@media (max-width: 854px) {
+  .navbar-links {
+    display: none;
+  }
+  .landing {
+    position: relative;
+    overflow: hidden;
+    height: 80vh !important;
+  }
+  .landing .left {
+    position: absolute;
+    max-width: 100vh;
+  }
+  .landing .right {
+    position: absolute;
+    bottom: 20%;
+    right: 0;
+    z-index: 3;
+    padding: 1rem !important;
+    width: 80%;
+  }
+  .landing .right h3 {
+    font-size: 2.7rem !important;
+  }
+  .cards {
+    font-size: 0.7rem !important;
+  }
+  .cards .item {
+    width: 50% !important;
+  }
+  .timer {
+    background-position: center center;
+    background-size: 100px;
+  }
+  .timer .text p {
+    font-size: 0.9rem !important;
+  }
+  .timer button {
+    width: 150px !important;
+  }
+  .footer {
+    flex-direction: column !important;
+  }
+  .footer .right a {
+    position: absolute;
+  }
+}
