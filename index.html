@@ -76,51 +76,57 @@
           <li><a class="dropdown-item" href="#">England</a></li>
         </ul>
       </div>
-    </div>
-       
+    </div>    
     <div
+    class="header p-3 px-4 d-flex justify-content-between align-items-start"
     style="z-index: 55 !important;"
-      class="header p-3 px-4 d-flex justify-content-between align-items-start"
-      id="header"
+    id="header"
     >
     <div id="menu" class="d-none">    <i id="" class="fa-solid fa-bars"></i>
     </div>
       <h3 class="fw-bold">Comvort</h3>
       <ul class="navbar-links m-auto">
         <button
-          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
+          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-light opacity-75"
           style="color: var(--dark)"
+          id="home-btn"
         >
           HOME
         </button>
         <button
-          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
+          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-light opacity-75"
           style="color: var(--dark)"
+          id="product-btn"
+
         >
           PRODUCT
         </button>
         <button
-          class="btn bg-transparent border-0 fw-semibold opacity-75"
+          class="btn bg-transparent border-0 opacity-75 fw-light"
           style="color: var(--dark)"
+          id="shop-btn"
         >
-          SHOP
+        <a href="#products" class="text-dark text-decoration-none">SHOP</a>
         </button>
         <button
-          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
+          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-light opacity-75"
           style="color: var(--dark)"
+          id="page-btn"
         >
           PAGE
         </button>
         <button
-          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
+          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-light opacity-75"
           style="color: var(--dark)"
+          id="blog-btn"
         >
           BLOG</button
         ><button
-          class="btn bg-transparent border-0 fw-semibold opacity-75"
+          class="btn bg-transparent border-0 fw-light opacity-75"
           style="color: var(--dark)"
+          id="contact-btn"
         >
-          CONTACT
+        <a href="#contact" class="text-dark text-decoration-none">CONTACT</a>
         </button>
       </ul>
       <div class="links d-flex gap-4 justify-content-center align-items-center">
@@ -131,10 +137,10 @@
       </div>
       
     </div>
-         <div id="sm-menu" class="small-screen-menu bg-light " style="z-index: 22443;;width: 100%; height: 50vh; display: none; transition: .3s !important;">
+    <div id="sm-menu" class="small-screen-menu bg-light " style="z-index: 22443;;width: 100%; height: 50vh; display: none; transition: .3s !important;">
         <ul class="navbar-links m-auto d-flex flex-column align-items-start justify-content-start p-2  h-100">
         <button
-          class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
+          class="home-btn-sm btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
           style="color: var(--dark)"
         >
           HOME
@@ -142,6 +148,7 @@
         <button
           class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
           style="color: var(--dark)"
+          id="product-btn-sm"
         >
           PRODUCT
         </button>
@@ -149,38 +156,47 @@
           class="btn bg-transparent border-0 fw-semibold opacity-75"
           style="color: var(--dark)"
         >
-          SHOP
+        <a href="#products" class="text-dark text-decoration-none">SHOP</a>
         </button>
         <button
           class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
           style="color: var(--dark)"
+          id="page-btn-sm"
         >
           PAGE
         </button>
         <button
           class="btn btn-dark dropdown-toggle bg-transparent border-0 fw-semibold opacity-75"
           style="color: var(--dark)"
+          id="blog-btn-sm"
         >
           BLOG</button
         ><button
           class="btn bg-transparent border-0 fw-semibold opacity-75"
           style="color: var(--dark)"
         >
-          CONTACT
+        <a href="#contact" class="text-dark text-decoration-none">CONTACT</a>
         </button>
       </ul>
     </div>
+    <div class="pressed-link-extansion d-none" id="press-li-ex">
+    </div>
     <div class="landing d-flex" style="height: 100vh">
-      <div class="left">
+      <div class="slider-btn d-flex g-3 position-absolute" style="top: 95%;left: 2%;height: 8%; width: 10%;">
+        <div id="slide-left" class="one text-dark d-flex justify-content-center bg-light align-items-center" style="width: 45%; margin-right:4% ;cursor: pointer;"><i class="fa-solid fa-chevron-left"></i></div>
+        <div id="slide-right" class="two text-dark d-flex justify-content-center bg-light align-items-center" style="width: 45%;cursor: pointer;"><i class="fa-solid fa-chevron-right"></i></div>
+      </div>
+      <div class="left d-flex justify-content-start" style="max-width: 50%;">
         <img
-          src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/3_f534bf07-5ddf-4c44-a6ed-19464e858d4a_1600x.jpg?v=1682067468"
-          class="mw-100 object-fit-cover"
+        id="land-img"
+          src="images/image2.png"
+          class="object-fit-cover"
           alt=""
         />
       </div>
       <div
-        class="right d-flex flex-column justify-content-center align-items-end text-end px-5"
-        style=""
+        class="w-50 right d-flex flex-column justify-content-center align-items-end text-end px-5"
+        style="max-width: 50%;"
       >
         <p class="fs-5 opacity-75 fw-light">New Collection</p>
         <h3
@@ -315,9 +331,9 @@
         class="item position-relative d-flex"
         style="width: 32%; height: 250px"
       >
-        <a href="" class="position-absolute btn border border-1 rounded-0 m-3"
+        <!-- <a href="" class="position-absolute btn border border-1 rounded-0 m-3"
           >Shop Now</a
-        >
+        > -->
         <img
           class="object-fit-cover w-100"
           src="https://cdn.shopify.com/s/files/1/0749/8304/7476/products/2_ba63627d-d2a0-4ce7-a7da-0041cbfc10ce_360x.jpg?v=1681304922"
@@ -341,43 +357,164 @@
         />
       </div>
     </div>
-    <div class="products text-center my-5">
+    <div class="products text-center my-5" id="products">
       <h2 class="text-capitalize">our products</h2>
       <ul
         class="product-nav-links text-capitalize mt-4 products-links list-unstyled d-flex flex-wrap w-75 m-auto justify-content-center align-items-center"
       >
-        <li>
-          <a
-            href=""
-            class="text-dark text-decoration-none m-5 opacity-75 fw-bold border-bottom border-4 border-dark p-1"
-            >cabinat</a
-          >
+        <li id="cabinet-link" class="text-dark text-decoration-none m-2 opacity-75 fw-bold p-1">cabinat
         </li>
-        <li>
-          <a
-            href=""
-            class="text-dark text-decoration-none m-5 fw-bold opacity-50"
-            >chair</a
-          >
+        <li id="chairs" class="text-dark text-decoration-none m-2 opacity-75 fw-bold p-1">
+          Chair
         </li>
-        <li>
-          <a
-            href=""
-            class="text-dark text-decoration-none m-5 fw-bold opacity-50"
-            >lamp</a
-          >
+        <li id="lamp" class="text-dark text-decoration-none m-2 opacity-75 fw-bold p-1">
+         lamp
         </li>
-        <li>
-          <a
-            href=""
-            class="text-dark text-decoration-none m-5 fw-bold opacity-50"
-            >table</a
-          >
+        <li id="tables" class="text-dark text-decoration-none m-2 opacity-75 fw-bold p-1">
+          table
         </li>
       </ul>
     </div>
-    <div class="card-group container-fluid p-5 gap-5">
-      <div class="card border-0 text-center">
+    <div id="c-group" class="card-group container-fluid p-5 gap-5 ">
+
+    </div>
+    <div class="timer" style="height: 70vh; background-size: cover">
+      <div
+        class="text p-3 h-100 d-flex flex-column w-50 justify-content-center"
+      >
+        <p class="fs-5 fw-light">Chair & Sofa For Sale</p>
+        <h3 class="fw-bold" style="font-size: 3.5rem; letter-spacing: 2px">
+          LIMITED TIME OFFER
+        </h3>
+        <div class="time mt-3 d-flex gap-2 justify-content-start">
+          <div class="pt-3 day text-start fs-4 border border-1 border-black d-flex justify-content-around align-items-center flex-column" style="width: 60px;height: 100%;">
+            <p class="fs-1 fw-bolder">25</p>
+            <p class="fw-light" style="font-size: .7rem !important;">DAYS</p>
+          </div>
+          
+          <div class="pt-3 hours text-start fs-4 border border-1 border-black d-flex justify-content-center align-items-center flex-column" style="width: 60px;height: 100%;">
+            <p class="fs-1 fw-bolder">5</p>
+            <p class="fw-light" style="font-size: .7rem !important;">HOURS</p>
+          </div>
+
+          <div id="minutes" class="pt-3 minutes text-start fs-4 border border-1 border-black d-flex justify-content-around align-items-center flex-column" style="width: 60px;height: 100%;">
+            <p id="count-minutes" class="count-minutes fs-1 fw-bolder">59</p>
+            <p class="fw-light" style="font-size: .7rem !important;">MINUTES</p>
+          </div>
+          
+          <div id="seconds" class="pt-3 seconds text-start fs-4  border border-1 border-black d-flex justify-content-center align-items-center flex-column" style="width: 60px;height: 100%;">
+            <p id="seconds-count" class="count fs-1 fw-bolder">59</p>
+            <p class="fw-light " style="font-size: .7rem !important;">SECONDS</p>
+          </div>
+        </div>
+        <button
+          class="mt-5 py-2 text-light bg-dark border-0"
+          style="width: 17%"
+        >
+          Shop Now
+        </button>
+      </div>
+    </div>
+    <div
+      class="companies d-flex flex-wrap justify-content-center gap-5 p-5 m-5"
+    >
+      <img
+        class="mx-5"
+        style="max-width: 100%; width: 200px; height: 100px"
+        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-1_91a81b88-a125-4c89-8e41-d8ba6c3a4458.png?v=1682002959"
+        alt=""
+      />
+      <img
+        style="max-width: 100%; width: 200px; height: 100px"
+        class="mx-5"
+        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-2_c465a837-668f-419e-9473-1d74a1f3b1c4.png?v=1682002971"
+        alt=""
+      />
+      <img
+        style="max-width: 100%; width: 200px; height: 100px"
+        class="mx-5"
+        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-3_fa6cd9a4-8e4e-461b-b369-9c8e6a256519.png?v=1682002981"
+        alt=""
+      />
+      <img
+        style="max-width: 100%; width: 200px; height: 100px"
+        class="mx-5"
+        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-4_8ffae0dd-c8ba-48d1-90bc-8e574eb240ea.png?v=1682002990"
+        alt=""
+      />
+      <img
+        style="max-width: 100%; width: 200px; height: 100px"
+        class="mx-5"
+        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-5_d0aa84e4-742e-4fc3-b9f8-88d9171d7222.png?v=1682003000"
+        alt=""
+      />
+    </div>
+    <div
+    id="contact"
+      class="footer d-flex justify-content-between p-5 text-light"
+      style="background-color: var(--dark)"
+    >
+      <div class="left">
+        <h1 class="fw-bold">Comvort</h1>
+        <div class="text">
+          <address class="d-flex gap-2 align-items-start my-4">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Elsafyna,Toukh,Qalupia</p>
+          </address>
+           <div class="email d-flex align-items-center my-4">
+            <i class="fa-regular fa-envelope"></i>
+            <p class="m-auto mx-1 small">
+              <a
+                href="mailto:sayedrady61@gmail.com"
+                class="text-light text-decoration-none"
+                >sayedrady61@gmail.com</a
+              >
+            </p>
+          </div>
+          <div class="phone d-flex align-items-center my-4 px-3">
+            <i class="fa-solid fa-phone"></i>
+            <p class="m-auto small">
+              <a href="tel:+2013631377" class="text-light text-decoration-none"
+                >+2013631377</a
+              >
+            </p>
+          </div>
+          <div class="social mx-2 my-4">
+          <a href="" class="text-light text-decoration-none">
+            <i class="fa-brands fa-twitter px-1"></i>
+          </a>
+          <a href="" class="text-light text-decoration-none">
+            <i class="fa-brands fa-facebook px-1"></i>
+          </a>
+          <a href="" class="text-light text-decoration-none">
+            <i class="fa-brands fa-instagram px-1"></i>
+          </a>
+        </div>
+        </div>
+        </div>
+      <div class="center">
+        <h4 class="fw-bold">INFORMATION</h4>
+        <ul class="list-unstyled d-flex flex-column g-5 text-capitalize">
+          <li>FAQ</li>
+          <li>PRIVACY POLICY</li>
+          <li>CUSTOMER SERVICES</li>
+          <li>CONTACT US</li>
+        </ul>
+      </div>
+      <div class="right">
+        <h4 class="fw-bold">NEWSLETTER</h4>
+        <p class="w-75">Enter your email below to be the first to know about new collections and product launches.</p>
+        <input type="text" class="bg-transparent p-1 text-light border-0 border-bottom w-50 fs-6" placeholder="Email">
+        <a href="mailto:sayedrady388@gmail.com" class="text-decoration-none text-light bg-black px-4 py-2 mx-5">Send</a>
+      </div>
+    </div>
+    </div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="all.min.js"></script>
+    <script src="enc.js" type="text/javascript"></script>
+  </body>
+</html>
+      <!-- <div class="card border-0 text-center">
         <span
           class="position-absolute m-3 text-light px-2"
           style="background-color: var(--dark-blue)"
@@ -447,140 +584,4 @@
           <p class="opacity-50">Grier Cabinet</p>
           <p class="opacity-50" style="margin-top: -10px">$784.00</p>
         </div>
-      </div>
-    </div>
-    <div class="timer" style="height: 70vh; background-size: cover">
-      <div
-        class="text p-3 h-100 d-flex flex-column w-50 justify-content-center"
-      >
-        <p class="fs-5 fw-light">Chair & Sofa For Sale</p>
-        <h3 class="fw-bold" style="font-size: 3.5rem; letter-spacing: 2px">
-          LIMITED TIME OFFER
-        </h3>
-        <div class="time mt-3 d-flex gap-2 justify-content-start">
-          <div class="day text-center fs-4">
-            <p>25</p>
-            <p>DAYS</p>
-          </div>
-          :
-          <div class="hours text-center fs-4">
-            <p>5</p>
-            <p>HOURS</p>
-          </div>
-          :
-          <div class="minutes text-center fs-4">
-            <p>18</p>
-            <p>MINUTES</p>
-          </div>
-          :
-          <div class="seconds text-center fs-4">
-            <p>10</p>
-            <p>SECONDS</p>
-          </div>
-        </div>
-        <button
-          class="mt-5 py-2 text-light bg-dark border-0"
-          style="width: 17%"
-        >
-          Shop Now
-        </button>
-      </div>
-    </div>
-    <div
-      class="companies d-flex flex-wrap justify-content-center gap-5 p-5 m-5"
-    >
-      <img
-        class="mx-5"
-        style="max-width: 100%; width: 200px; height: 100px"
-        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-1_91a81b88-a125-4c89-8e41-d8ba6c3a4458.png?v=1682002959"
-        alt=""
-      />
-      <img
-        style="max-width: 100%; width: 200px; height: 100px"
-        class="mx-5"
-        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-2_c465a837-668f-419e-9473-1d74a1f3b1c4.png?v=1682002971"
-        alt=""
-      />
-      <img
-        style="max-width: 100%; width: 200px; height: 100px"
-        class="mx-5"
-        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-3_fa6cd9a4-8e4e-461b-b369-9c8e6a256519.png?v=1682002981"
-        alt=""
-      />
-      <img
-        style="max-width: 100%; width: 200px; height: 100px"
-        class="mx-5"
-        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-4_8ffae0dd-c8ba-48d1-90bc-8e574eb240ea.png?v=1682002990"
-        alt=""
-      />
-      <img
-        style="max-width: 100%; width: 200px; height: 100px"
-        class="mx-5"
-        src="https://cdn.shopify.com/s/files/1/0749/8304/7476/files/logo-5_d0aa84e4-742e-4fc3-b9f8-88d9171d7222.png?v=1682003000"
-        alt=""
-      />
-    </div>
-    <div
-      class="footer d-flex justify-content-between p-5 text-light"
-      style="background-color: var(--dark)"
-    >
-      <div class="left">
-        <h1 class="fw-bold">Comvort</h1>
-        <div class="text">
-          <address class="d-flex gap-2 align-items-start my-4">
-            <i class="fa-solid fa-location-dot"></i>
-            <p>Elsafyna,Toukh,Qalupia</p>
-          </address>
-           <div class="email d-flex align-items-center my-4">
-            <i class="fa-regular fa-envelope"></i>
-            <p class="m-auto mx-1 small">
-              <a
-                href="mailto:sayedrady61@gmail.com"
-                class="text-light text-decoration-none"
-                >sayedrady61@gmail.com</a
-              >
-            </p>
-          </div>
-          <div class="phone d-flex align-items-center my-4 px-3">
-            <i class="fa-solid fa-phone"></i>
-            <p class="m-auto small">
-              <a href="tel:+2013631377" class="text-light text-decoration-none"
-                >+2013631377</a
-              >
-            </p>
-          </div>
-          <div class="social mx-2 my-4">
-          <a href="" class="text-light text-decoration-none">
-            <i class="fa-brands fa-twitter px-1"></i>
-          </a>
-          <a href="" class="text-light text-decoration-none">
-            <i class="fa-brands fa-facebook px-1"></i>
-          </a>
-          <a href="" class="text-light text-decoration-none">
-            <i class="fa-brands fa-instagram px-1"></i>
-          </a>
-        </div>
-        </div>
-        </div>
-      <div class="center">
-        <h4 class="fw-bold">INFORMATION</h4>
-        <ul class="list-unstyled d-flex flex-column g-5 text-capitalize">
-          <li>FAQ</li>
-          <li>PRIVACY POLICY</li>
-          <li>CUSTOMER SERVICES</li>
-          <li>CONTACT US</li>
-        </ul>
-      </div>
-      <div class="right">
-        <h4 class="fw-bold">NEWSLETTER</h4>
-        <p class="w-75">Enter your email below to be the first to know about new collections and product launches.</p>
-        <input type="text" class="bg-transparent p-1 text-light border-0 border-bottom w-50 fs-6" placeholder="Email">
-        <a href="mailto:sayedrady388@gmail.com" class="text-decoration-none text-light bg-black px-4 py-2 mx-5">Send</a>
-      </div>
-    </div>
-    </div>
-    <script src="bootstrap.bundle.min.js"></script>
-    <script src="all.min.js"></script>
-    <script src="enc.js" type="text/javascript"></script>
-  </body>
-</html>
+      </div> -->
