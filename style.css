@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Lexend", sans-serif;
   font-family: "Righteous", cursive;
@@ -17,6 +20,7 @@ body {
   --red: #dc143c;
   --dark: #202020;
   --dark-blue: #144272;
+  --brown: #7b3f00;
 }
 .communication-header {
   background-color: var(--dark);
@@ -28,10 +32,7 @@ body {
 .landing .left {
   flex-basis: 50%;
 }
-.landing .left img {
-  min-width: 200%;
-  height: 100%;
-}
+
 .products-links li a {
   transition: 0.3s;
 }
@@ -58,6 +59,117 @@ button:hover {
 .high {
   height: 300px;
 }
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 2% 0 3% 0;
+  gap: 2%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; /* border: 0.1px solid var(--dark); */
+}
+.home-links div {
+  width: 20%;
+  margin: 1%;
+}
+.home-links div:hover {
+  opacity: 0.5;
+}
+.home-links p {
+  color: var(--dark);
+}
+.home-links img {
+  width: 100%;
+}
+.product-links {
+  display: flex;
+  padding: 3%;
+  gap: 4%;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.product-links div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: start;
+  color: var(--dark);
+}
+.product-links h3 {
+  font-size: 1.4rem;
+}
+.product-links ul {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style-type: none;
+}
+.product-links ul li {
+  margin: 4% 0;
+  color: var(--dark);
+  opacity: 0.7;
+  font-weight: light;
+  padding: 1%;
+}
+.product-links ul li:hover,
+.page-link li:hover,
+.blog-link li:hover {
+  border-bottom: 1px solid var(--dark);
+  cursor: pointer;
+}
+.product-links img {
+  width: 100%;
+  height: 250px;
+}
+.product-links .fproducts {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 3%;
+  gap: 20px;
+}
+.product-links .fproducts div {
+  width: 50%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.fproducts div p {
+  color: var(--dark);
+  padding-top: 10px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+.product-links .fproducts div :hover {
+  opacity: 0.4;
+  cursor: pointer;
+}
+.page-link,
+.blog-link {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.page-link li,
+.blog-link li {
+  color: var(--dark);
+  opacity: 0.78;
+  margin: 0.3% !important;
+  padding: 0 !important;
+}
+#c-group .card:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
 @media (max-width: 700px) {
   .communication-header,
   .communication-header .left {
@@ -66,11 +178,24 @@ button:hover {
   .product-nav-links {
     width: 100% !important;
   }
-  .product-nav-links li a {
+  .product-nav-links li {
     margin: 10px !important;
+  }
+  .landing .left img {
+    height: 70% !important;
   }
 }
 @media (max-width: 854px) {
+  .product-links {
+    width: 100% !important;
+    justify-content: flex-start;
+  }
+  .product-links .fproducts {
+    width: 100%;
+  }
+  .home-links div {
+    width: 35%;
+  }
   #menu {
     display: block !important;
   }
@@ -81,10 +206,6 @@ button:hover {
     position: relative;
     overflow: hidden;
     height: 80vh !important;
-  }
-  .landing .left {
-    position: absolute;
-    max-width: 100vh;
   }
   .landing .right {
     position: absolute;
@@ -119,4 +240,37 @@ button:hover {
   .footer .right a {
     position: absolute;
   }
+  .slider-btn {
+    top: 2% !important;
+    z-index: 111111;
+    left: 2% !important;
+    width: 24% !important;
+    height: 7% !important;
+  }
+  .timer .time {
+    width: 200%;
+  }
+  .product-sm {
+    flex-wrap: wrap !important;
+  }
+  .product-sm .img {
+    width: 100% !important;
+  }
+  .product-sm .dtails {
+    width: 100% !important;
+  }
+}
+@media (max-width: 400px) {
+  .landing .left img {
+    height: 70% !important;
+  }
+}
+#products .product-nav-links li:hover {
+  background-color: var(--dark) !important;
+  color: white !important;
+  cursor: pointer;
+}
+#add-to-cart:hover {
+  background-color: var(--dark) !important;
+  color: var(--white) !important;
 }
