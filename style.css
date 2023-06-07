@@ -207,13 +207,16 @@ button:hover {
     overflow: hidden;
     height: 80vh !important;
   }
+  .landing .left {
+    max-height: 100%;
+  }
   .landing .right {
     position: absolute;
-    bottom: 20%;
+    bottom: 7%;
     right: 0;
     z-index: 3;
     padding: 1rem !important;
-    width: 80%;
+    width: 100% !important;
   }
   .landing .right h3 {
     font-size: 2.7rem !important;
