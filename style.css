@@ -267,6 +267,12 @@ button:hover {
   .landing .left img {
     height: 70% !important;
   }
+  .btns {
+    flex-direction: column !important;
+  }
+  .btns button {
+    width: 100% !important;
+  }
 }
 #products .product-nav-links li:hover {
   background-color: var(--dark) !important;
