@@ -166,9 +166,9 @@ function navLinksMenuEx() {
   }
 }
 let landingImages = [
+  "images/image3.png",
   "images/image1.png",
   "images/image2.png",
-  "images/image3.png",
 ];
 let lcount = 0;
 document.getElementById("slide-left").onclick = () => {
