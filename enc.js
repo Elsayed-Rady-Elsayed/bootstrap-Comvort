@@ -124,6 +124,8 @@ function homeBtn() {
     if (element.name === "parallax") {
       console.log("link add");
       sesction.href = "realaxPage.html";
+    } else {
+      arguments.href = "";
     }
     document.getElementById("press-li-ex").appendChild(sesction);
   });
