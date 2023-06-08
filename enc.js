@@ -118,6 +118,7 @@ function homeBtn() {
     let img = document.createElement("img");
     img.setAttribute("src", element.image);
     text.innerHTML = element.name;
+    if (element.name == "home parallax") sesction.id = "relaxPage";
     sesction.appendChild(text);
     sesction.appendChild(img);
     document.getElementById("press-li-ex").appendChild(sesction);
@@ -166,9 +167,9 @@ function navLinksMenuEx() {
   }
 }
 let landingImages = [
-  "images/image3.png",
   "images/image1.png",
   "images/image2.png",
+  "images/image3.png",
 ];
 let lcount = 0;
 document.getElementById("slide-left").onclick = () => {
@@ -394,4 +395,45 @@ setInterval(() => {
 }, 1000);
 document.querySelector("#c-group").addEventListener("click", (e) => {
   window.location.href = "product page.html";
+});
+document.getElementById("cart").onclick = () => {
+  document.getElementById("cart-part").classList =
+    "cart-part position-absolute end-0 bg-body-secondary";
+  document.getElementById("overlay").style.cssText =
+    "display:block !important;";
+};
+document.getElementById("close-cart").onclick = () => {
+  document.getElementById("cart-part").classList =
+    "cart-part position-absolute end-100 bg-body-secondary";
+  document.getElementById("overlay").style.cssText = "display:none !important;";
+};
+
+document.getElementById("fav").onclick = () => {
+  console.log("gg");
+  document.getElementById("fav-part").classList =
+    "fav-part position-absolute end-0 bg-body-secondary";
+  document.getElementById("overlay").style.cssText =
+    "display:block !important;";
+};
+document.getElementById("close-fav").onclick = () => {
+  document.getElementById("fav-part").classList =
+    "fav-part position-absolute end-100 bg-body-secondary";
+  document.getElementById("overlay").style.cssText = "display:none !important;";
+};
+document.getElementById("search").onclick = () => {
+  console.log("gg");
+  document.getElementById("search-part").style.cssText = "top:0% !important;";
+  document.getElementById("overlay").style.cssText =
+    "display:block !important;";
+};
+document.getElementById("close-search").onclick = () => {
+  document.getElementById("search-part").style.cssText = "top:-30% !important;";
+  document.getElementById("overlay").style.cssText = "display:none !important;";
+};
+window.addEventListener("click", (e) => {
+  console.log(e.target.id);
+  if (e.target.id == "") {
+    window.location.href = "realaxPage.html";
+    console.log("gg");
+  }
 });
