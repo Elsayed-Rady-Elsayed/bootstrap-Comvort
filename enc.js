@@ -18,17 +18,17 @@ let homeLinkImages = [
   {
     image:
       "https://cdn.shopify.com/s/files/1/0749/8304/7476/files/demo_3_360x.jpg?v=1683025036",
-    name: "dream home",
+    name: "dream",
   },
   {
     image:
       "https://cdn.shopify.com/s/files/1/0749/8304/7476/files/demo_4_360x.jpg?v=1683025039",
-    name: "interdior design",
+    name: "interdior",
   },
   {
     image:
       "https://cdn.shopify.com/s/files/1/0749/8304/7476/files/demo_5_360x.jpg?v=1683025044",
-    name: "home parallax",
+    name: "parallax",
   },
 ];
 let productsLink = [
@@ -81,6 +81,7 @@ document.querySelector("#product-btn").onclick = productBtn;
 document.querySelector("#sm-menu #product-btn-sm").onclick = productBtn;
 document.querySelector("#home-btn").onclick = homeBtn;
 document.querySelector("#sm-menu .home-btn-sm").onclick = homeBtn;
+
 document.querySelector("#page-btn").onclick = PageItems;
 document.querySelector("#blog-btn").onclick = BlogItems;
 document.querySelector("#sm-menu #page-btn-sm").onclick = PageItems;
@@ -113,14 +114,17 @@ function homeBtn() {
   document.getElementById("press-li-ex").innerHTML = "";
   document.getElementById("press-li-ex").classList = "home-links";
   homeLinkImages.forEach((element) => {
-    let sesction = document.createElement("div");
+    let sesction = document.createElement("a");
     let text = document.createElement("p");
     let img = document.createElement("img");
     img.setAttribute("src", element.image);
     text.innerHTML = element.name;
-    if (element.name == "home parallax") sesction.id = "relaxPage";
     sesction.appendChild(text);
     sesction.appendChild(img);
+    if (element.name === "parallax") {
+      console.log("link add");
+      sesction.href = "realaxPage.html";
+    }
     document.getElementById("press-li-ex").appendChild(sesction);
   });
   navLinksMenuEx();
@@ -430,10 +434,3 @@ document.getElementById("close-search").onclick = () => {
   document.getElementById("search-part").style.cssText = "top:-30% !important;";
   document.getElementById("overlay").style.cssText = "display:none !important;";
 };
-window.addEventListener("click", (e) => {
-  console.log(e.target.id);
-  if (e.target.id == "") {
-    window.location.href = "realaxPage.html";
-    console.log("gg");
-  }
-});
